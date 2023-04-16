@@ -1,5 +1,8 @@
 body {
     background-color: red;
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden; 
 }
 
 
@@ -8,7 +11,7 @@ body {
     position: relative;
     width: 375px;
     height: 667px;
-
+    
     background: #F3F3F3;
 }
 
@@ -21,6 +24,7 @@ body {
 
     background: #FFFFFF;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+    
     }
 
     .menusuperior img {
@@ -39,6 +43,67 @@ body {
         top: 18px;
         color: black;
     }
+
+    .conteudo {
+        padding-top: 106px;
+        padding-bottom: 106px;
+        width: auto;
+        max-height: 456px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+    }
+
+    .conteudo::-webkit-scrollbar {
+        display: none;
+      }
+
+
+    .caixamensagem {
+        width: 375px;
+        min-height: 40px;
+        background: #FFFFFF;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        padding: 9px;
+        box-sizing: border-box;
+        margin-bottom: 4px;
+    }
+
+    .caixamensagem.status {
+        background: #DCDCDC;
+    }
+
+    .caixamensagem p {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-size: 14px;
+        padding: 9px;
+        line-height: 16px;
+        color: #000000;
+    }
+
+    .negrito {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+
+    }
+
+    .horario {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #AAAAAA;
+    }
+
 
     ::placeholder {
         color: black;
