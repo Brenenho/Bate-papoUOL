@@ -45,9 +45,13 @@ function limparInput() {
         }
  }
 
- const promise = axios.get('https://mock-api.driven.com.br/api/vm/uol/messages');
- promise.then( processarListaRecebidaDoServidor ); 
- 
+ function atualizarmensagem() {
+  const promise = axios.get('https://mock-api.driven.com.br/api/vm/uol/messages');
+  promise.then( processarListaRecebidaDoServidor );
+ }
+
+ atualizarmensagem();
+ setInterval(atualizarmensagem, 3000);
  // 3 - pegar a resposta e processar esta resposta ( renderizar no HTML a lista que o servidor me enviou)
  function processarListaRecebidaDoServidor(res){
      console.log(res);
@@ -100,6 +104,7 @@ function inserirReceita() {
     );
   
     promessa.then(enviosucesso);
+    promessa.catch(naoenviada)
     limparInput();
   }
 
@@ -113,4 +118,9 @@ function inserirReceita() {
 
     mensagens = respostaatualizada.data;
     renderizarMensagens();
+  }
+
+  function naoenviada() {
+    window.location.reload(forceReload);
+
   }
