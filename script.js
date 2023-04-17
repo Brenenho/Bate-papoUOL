@@ -72,13 +72,13 @@ function renderizarMensagens() {
     
     if (mensagem.type === "status") {
       mensagens1.innerHTML += `
-    <div class="caixamensagem status">
+    <div class="caixamensagem status" data-test="message">
               <p><a class="horario">(${mensagem.time})</a>  <a class="negrito">${mensagem.from}</a> para <a class="negrito">${mensagem.to}:</a> ${mensagem.text}</p>
             </div>
     `
     } else {
       mensagens1.innerHTML += `
-    <div class="caixamensagem">
+    <div class="caixamensagem" data-test="message">
               <p><a class="horario">(${mensagem.time})</a>  <a class="negrito">${mensagem.from}</a> para <a class="negrito">${mensagem.to}:</a> ${mensagem.text}</p>
             </div>
     `}

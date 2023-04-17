@@ -67,8 +67,7 @@ body {
         border-radius: 2px;
         display: flex;
         align-items: center;
-        padding: 9px;
-        box-sizing: border-box;
+        padding: 6px;
         margin-bottom: 4px;
     }
 
@@ -80,9 +79,11 @@ body {
         font-family: 'Roboto';
         font-style: normal;
         font-size: 14px;
-        padding: 9px;
-        line-height: 16px;
+        padding-right: 9px;
+        padding-left: 9px;
+        line-height: 20px;
         color: #000000;
+        
     }
 
     .negrito {
