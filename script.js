@@ -1,5 +1,5 @@
 let mensagens = [];
-axios.defaults.headers.common['Authorization'] = '9TxfMaln8uP2z4em41wIu4rz';
+axios.defaults.headers.common['Authorization'] = 'Kps7jJcX6bsjiTXoVfNJrPap';
 let usuario = prompt("Escreva o seu nome: ")
 
 function entrarnasala() {
@@ -70,17 +70,28 @@ function renderizarMensagens() {
   
   const mensagens1 = document.querySelector(".conteudo");
 
+  mensagens1.innerHTML = ""
+
   for(let i = 0; i < mensagens.length; i++){
     let mensagem = mensagens[i];
 
     
     if (mensagem.type === "status") {
+
+      
+    
+      
+
       mensagens1.innerHTML += `
     <div class="caixamensagem status" data-test="message">
               <p><a class="horario">(${mensagem.time})</a>  <a class="negrito">${mensagem.from}</a> para <a class="negrito">${mensagem.to}:</a> ${mensagem.text}</p>
             </div>
     `
     } else {
+
+      
+
+
       mensagens1.innerHTML += `
     <div class="caixamensagem" data-test="message">
               <p><a class="horario">(${mensagem.time})</a>  <a class="negrito">${mensagem.from}</a> para <a class="negrito">${mensagem.to}:</a> ${mensagem.text}</p>

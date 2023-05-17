@@ -69,6 +69,7 @@ body {
         align-items: center;
         padding: 6px;
         margin-bottom: 4px;
+        flex-wrap: wrap;
     }
 
     .caixamensagem.status {
